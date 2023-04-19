@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const app = express();
 const cors = require("cors");
 
-const PORT = 8000;
+const PORT = 3001;
 
 const connection = mysql.createConnection({
   host: "eu-cdbr-west-03.cleardb.net",
