@@ -1,14 +1,10 @@
-const bodyParser = require("body-parser");
 const express = require("express");
 const mysql = require("mysql");
 
 const app = express();
-const http = require("http");
-const server = http.createServer(app);
-
 const cors = require("cors");
 
-const PORT = 8000
+const PORT = 3001;
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -24,7 +20,6 @@ connection.connect((err) => {
 });
 
 // Middleware pour gérer les requêtes JSON
-app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 
