@@ -8,6 +8,8 @@ const server = http.createServer(app);
 
 const cors = require("cors");
 
+const PORT = 8000
+
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -23,6 +25,8 @@ connection.connect((err) => {
 
 // Middleware pour gérer les requêtes JSON
 app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
 
 // Middleware pour éviter les problèmes de CORS
 app.use((req, res, next) => {
