@@ -4,11 +4,11 @@ const mysql = require("mysql");
 const app = express();
 const cors = require("cors");
 
-const PORT = 3001;
+const PORT = 8000;
 
 const connection = mysql.createConnection({
   host: "sql7.freemysqlhosting.net",
-  user: "	sql7613657",
+  user: "sql7613657",
   password: "kNjQmaGzN6",
   database: "sql7613657",
 });
