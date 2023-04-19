@@ -110,6 +110,6 @@ app.post("/modifyTodo", (req, res) => {
 });
 
 // Lancement du serveur Node.js
-app.listen(port, () => {
-  console.log(`Serveur Node.js écoutant sur le port ${port}`);
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Serveur Node.js écoutant sur le port ${PORT}`);
 });
