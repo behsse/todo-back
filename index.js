@@ -7,7 +7,6 @@ const http = require("http");
 const server = http.createServer(app);
 
 const cors = require("cors");
-const port = 8000;
 
 const connection = mysql.createConnection({
   host: "localhost",
