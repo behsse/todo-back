@@ -6,18 +6,18 @@ const cors = require("cors");
 
 const PORT = 8000;
 
-// const connection = mysql.createConnection({
-//   host: "eu-cdbr-west-03.cleardb.net",
-//   user: "b0c9b72b587b22",
-//   password: "20d80f34",
-//   database: "heroku_8774cbb8e6f7f1b",
-// });
+const connection = mysql.createConnection({
+  host: "eu-cdbr-west-03.cleardb.net",
+  user: "b0c9b72b587b22",
+  password: "20d80f34",
+  database: "heroku_8774cbb8e6f7f1b",
+});
 
-// // Connexion à MySQL
-// connection.connect((err) => {
-//   if (err) throw err;
-//   console.log("Connecté à la base de données MySQL");
-// });
+// Connexion à MySQL
+connection.connect((err) => {
+  if (err) throw err;
+  console.log("Connecté à la base de données MySQL");
+});
 
 // Middleware pour gérer les requêtes JSON
 app.use(cors());
