@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const app = express();
 const cors = require("cors");
 
-const PORT = 3001;
+const PORT = 8000;
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -22,14 +22,6 @@ connection.connect((err) => {
 // Middleware pour gérer les requêtes JSON
 app.use(cors());
 app.use(express.json());
-
-// Middleware pour éviter les problèmes de CORS
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
 
 // Route pour récupérer les données du front-end et les enregistrer dans MySQL
 app.post("/addTodo", (req, res) => {
