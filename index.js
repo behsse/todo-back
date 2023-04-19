@@ -7,10 +7,10 @@ const cors = require("cors");
 const PORT = 8000;
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "todolist",
+  host: "eu-cdbr-west-03.cleardb.net",
+  user: "b0c9b72b587b22",
+  password: "20d80f34",
+  database: "heroku_8774cbb8e6f7f1b",
 });
 
 // Connexion à MySQL
