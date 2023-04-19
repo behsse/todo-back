@@ -19,6 +19,14 @@ connection.connect((err) => {
   console.log("Connecté à la base de données MySQL");
 });
 
+// Middleware pour éviter les problèmes de CORS
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
 // Middleware pour gérer les requêtes JSON
 app.use(cors());
 app.use(express.json());
